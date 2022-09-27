@@ -10,3 +10,5 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+//TODO : make element K animate on appearing 

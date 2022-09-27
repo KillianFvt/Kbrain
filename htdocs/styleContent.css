@@ -2,3 +2,72 @@
     margin-top: 75px;
     /*background-color: #fff;*/
 }
+
+.sect1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buttonMenu {
+    float: right;
+    margin-top: 200px;
+    margin-right: 25px;
+    list-style: none;
+}
+
+.buttonMenu li {
+    margin: 25px 50px;
+}
+
+.bigK {
+    width: 1000px;
+    height: 1000px;
+}
+
+#exButt1 {
+    background-color: #000000;
+    padding: 10px 50px;
+    border: none;
+    border-radius: 10px;
+    transition: all 0.25s;
+
+    position: relative;
+    top : 0px;
+    left : 0px;
+
+    --shadow-distance : 5px;
+    box-shadow: 
+        0px 0px #390099,
+        0px 0px #9E0059,
+        0px 0px #FF0054,
+        0px 0px #FF5400,
+        0px 0px #FFBD00;
+}
+
+#exButt1:hover {
+    --shadow-distance : 5px;
+    box-shadow: 
+        calc(0px - var(--shadow-distance) * 1 ) calc(var(--shadow-distance) * 1) #390099,
+        calc(0px - var(--shadow-distance) * 2 ) calc(var(--shadow-distance) * 2) #9E0059,
+        calc(0px - var(--shadow-distance) * 3 ) calc(var(--shadow-distance) * 3) #FF0054,
+        calc(0px - var(--shadow-distance) * 4 ) calc(var(--shadow-distance) * 4) #FF5400,
+        calc(0px - var(--shadow-distance) * 5 ) calc(var(--shadow-distance) * 5) #FFBD00;
+
+        top : calc(0px - var(--shadow-distance) * 5);
+        left : calc(var(--shadow-distance) * 5);
+}
+
+#exButt1:active {
+    --shadow-distance : 3.5px;
+    box-shadow: 
+        calc(0px - var(--shadow-distance) * 1 ) calc(var(--shadow-distance) * 1) #390099,
+        calc(0px - var(--shadow-distance) * 2 ) calc(var(--shadow-distance) * 2) #9E0059,
+        calc(0px - var(--shadow-distance) * 3 ) calc(var(--shadow-distance) * 3) #FF0054,
+        calc(0px - var(--shadow-distance) * 4 ) calc(var(--shadow-distance) * 4) #FF5400,
+        calc(0px - var(--shadow-distance) * 5 ) calc(var(--shadow-distance) * 5) #FFBD00;
+
+        top : calc(0px - var(--shadow-distance) * 5);
+        left : calc(var(--shadow-distance) * 5);
+}
