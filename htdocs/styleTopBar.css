@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/*font-family: 'Ubuntu', sans-serif;*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /*background-color: #20182c;*/
+}
+
+body {
+    background-color: #20182c;
+}
+
+li, a, button {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    min-width: 100%;
+    min-height: 75px;
+    max-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 2.5%;
+    /*background-color: red;*/
+    box-shadow: 0px 0px 15px 10px #000000b0;
+    background-color: #200C64;
+
+    position: fixed;
+    top: 0px;
+
+}
+
+#navbar {
+    transition: all 0.3s ease-out;
+}
+
+a {
+    transition: 0.25s;
+}
+
+.logo {
+    --logoSize: 90px;
+    width: var(--logoSize);
+    height: var(--logoSize);
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    transition: all 0.3s ease-out;
+}
+
+#logoPlaceholder {
+    width: 50px;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.menu li a {
+    transition: all 0.25s ease 0s;
+}
+
+.menu li a:hover {
+    transition: all 0.35s ease 0s;
+    color: #b993ff;
+}
+
+#ContactButton {
+    padding: 10px 25px;
+    background-color: #350455;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+
+
+    transition: all 0.25s;
+}
+
+#ContactButton:hover {
+    background-color: #31003D;
+}
+
+#ContactButton:active {
+    background-color: #93619E;
+}
+
