@@ -1,0 +1,74 @@
+#exButt3-div {
+    background-color: none;
+    width: 100%;
+    position: relative;
+    transition: all 0.25s;
+
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background-color: none;
+}
+
+#exButt3 {
+    --hicol : #5300e2;
+    --defcol : white;
+    --shadcol : #390099;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+
+    box-shadow: none;
+
+    transition: all 0.25s;
+
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    box-shadow: 0 0 0px 0 var(--shadcol);
+}
+
+@keyframes floatingLoop {
+    0% {
+        top: 0px;
+    }
+    50% {
+        top: -15px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes floatingShadowLoop {
+    0% {
+        box-shadow: 0 0 1px 0 var(--shadcol);
+        color: var(--defcol);
+    }
+    50% {
+        box-shadow: 0 15px 15px 0 var(--shadcol);
+        color: var(--hicol);
+    }
+    100% {
+        box-shadow: 0 0 1px 0 var(--shadcol);
+        color: var(--defcol);
+    }
+}
+
+#exButt3-div:hover {
+    animation-name: floatingLoop;
+}
+
+#exButt3:hover {
+    animation-name: floatingShadowLoop;
+}
+
+#exButt3:active {
+    --aaaa : 0,255,0;
+    --hicol : chartreuse;
+    --defcol : rgb(var(--aaaa));
+    --shadcol : var(--hicol);
+}

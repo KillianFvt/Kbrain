@@ -1,9 +1,11 @@
 #exButt1 {
+    color: white;
     background-color: #000000;
     padding: 10px 50px;
     border: none;
     border-radius: 10px;
     transition: all 0.25s;
+    width: 100%;
 
     position: relative;
     top : 0px;

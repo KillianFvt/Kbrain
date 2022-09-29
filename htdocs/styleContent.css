@@ -143,6 +143,11 @@ body {
     margin: 25px 50px;
 }
 
+.buttonMenu li button {
+    height: 50px;
+    width: 150px;
+}
+
 .bigK {
     --left-pos : -50px;
     width: 1200px;
