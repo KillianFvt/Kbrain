@@ -8,9 +8,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styleTopBar.css">
         <link rel="stylesheet" href="styleContent.css">
+        <link rel="stylesheet" href="styleButt1.css">
     </head>
     <body>
-        <script type="text/javascript" src="script.js"></script>
         <header id="navbar">
 
             <img class="logo" id="logoNav" src="images/K-logo.png" atl="logo">
@@ -32,11 +32,35 @@
             </a>
         </header>
 
+        <div class="header-spacer"></div>
+
+        <div class="pre-content">
+            <div id="welcome-title-div">
+                <h1 id="welcome-title" class="fadeOnLoad" style="--delay : 0.25s; --direction : fadeDown">
+                    Hello, and<span> welcome </span>to my portfolio !
+                </h1>
+            </div>
+            
+            <br/>
+
+            <div>
+                <p id="welcome-txt" class="fadeOnLoad" style="--delay: 0.40s; --direction : fadeDown">
+                    I am Killian Fauvette, an IT student, who's passion is <span>coding</span>, working with computers, spending time <span>coding</span> again.<br/>
+                    <br>BLABLABLA<br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium viverra hendrerit. Phasellus vitae pellentesque est. Suspendisse faucibus gravida sapien, a fermentum nisl consequat ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi eu justo ac odio ultrices tristique. Morbi ultricies aliquet arcu, vitae posuere urna dictum id. Nullam iaculis lacinia nisi, vel rhoncus risus lobortis a. Integer varius malesuada sem ac porttitor.
+                </p>
+            </div>
+        </div>
+
+        <br/>
+
         <div class="content">
             <div class="sect1">
-                <img id="bigK" class="bigK" src="images/K-logo.png" atl="logo">
+                <div class="bigKDiv">
+                    <img id="bigK" class="bigK fadeOnLoad" style="--delay : 0.25s; --direction : fadeRight; --fade-duration : 1.25s" src="images/K-logo.png" atl="logo">
+                </div>
 
-                <ul class="buttonMenu">
+                <ul class="buttonMenu fadeOnLoad" style="--direction : fadeUp; --delay : 0.25s">
                     <li>
                         <button class="styledButton" id="exButt1" onclick="">Hello</button>
                     </li>
@@ -51,10 +75,28 @@
                     </li>
                 </ul>
 
-                <h3>
+                <h3 class="">
                     This is a text
                 </h3>
             </div>
         </div>
+
+        <div class="pre-content" loading="lazy">
+            <div id="welcome-title-div">
+                <h1 id="welcome-title" class="fadeOnLoad" style="--delay : 0.25s; --direction : fadeDown">
+                    Hello, and<span> welcome </span>to my portfolio !
+                </h1>
+            </div>
+            
+            <br/>
+
+            <div>
+                <p id="welcome-txt" class="fadeOnLoad" style="--delay : 0.40s; --direction : fadeDown">
+                    I am Killian Fauvette, an IT student, who's passion is <span>coding</span>, working with computers, spending time <span>coding</span> again.<br/>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pretium viverra hendrerit. Phasellus vitae pellentesque est. Suspendisse faucibus gravida sapien, a fermentum nisl consequat ac. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi eu justo ac odio ultrices tristique. Morbi ultricies aliquet arcu, vitae posuere urna dictum id. Nullam iaculis lacinia nisi, vel rhoncus risus lobortis a. Integer varius malesuada sem ac porttitor.
+                </p>
+            </div>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
     </body>
 </html>

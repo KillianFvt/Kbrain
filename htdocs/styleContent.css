@@ -1,3 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/*font-family: 'Ubuntu', sans-serif;*/
+
+body {
+    background-color: #20182c;
+    margin-bottom: 500px;
+}
+
+.header-spacer {
+    padding: 37.5px;
+    background-color: none;
+}
+
+.pre-content {
+    width: 100%;
+    padding: 0% 10%;
+    height: auto;
+    background-color: none;
+    margin-top: 75px;
+}
+
+.pre-content div {
+    display: flex;
+    justify-content: center;
+    background-color: none;
+}
+
+#welcome-title {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+}
+
+#welcome-title span {
+    color: whitesmoke;
+    word-spacing: normal;
+    font-size: 1.75em;
+}
+
+#welcome-txt {
+    font-family: 'Ubuntu', sans-serif;
+    color: white;
+    font-size: 1.25em;
+    font-weight: 300;
+    margin-bottom: 250px;
+}
+
+:root {
+    --fade-duration : 1s;
+}
+
+@keyframes Kanimation {
+    0% {
+        top: 50px;
+        right: 40px;
+    }
+    50% {
+        top: 0px;
+        right: 0px;
+    }
+    100% {
+        top: 50px;
+        right: 40px;
+    }
+}
+
+.bigKDiv {
+    top: 50px;
+    right: 40px;
+    background-color: none;
+    position: relative;
+    animation-name: Kanimation;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-duration: 15s;
+}
+
+@keyframes fadeDown {
+    0% {
+        opacity: 0;
+        top: 0px;
+    }
+    100% {
+        opacity: 1;
+        top: 30px;
+    }
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        top: 0px;
+    }
+    100% {
+        opacity: 1;
+        top: -30px;
+    }
+}
+
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        left: calc( var(--left-pos) + 0px)
+    }
+    100% {
+        opacity: 1;
+        left: calc( var(--left-pos) + 30px);
+    }
+}
+
+.fadeOnLoadAnimation {
+    animation: var(--direction) ease-out var(--fade-duration);
+}
+
+.fadeOnLoad {
+    opacity: 0;
+    position: relative;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: var(--delay);
+}
+
 .content {
     margin-top: 75px;
     /*background-color: #fff;*/
@@ -12,7 +134,7 @@
 
 .buttonMenu {
     float: right;
-    margin-top: 200px;
+    margin-top: 0px;
     margin-right: 25px;
     list-style: none;
 }
@@ -22,52 +144,7 @@
 }
 
 .bigK {
-    width: 1000px;
-    height: 1000px;
-}
-
-#exButt1 {
-    background-color: #000000;
-    padding: 10px 50px;
-    border: none;
-    border-radius: 10px;
-    transition: all 0.25s;
-
-    position: relative;
-    top : 0px;
-    left : 0px;
-
-    --shadow-distance : 5px;
-    box-shadow: 
-        0px 0px #390099,
-        0px 0px #9E0059,
-        0px 0px #FF0054,
-        0px 0px #FF5400,
-        0px 0px #FFBD00;
-}
-
-#exButt1:hover {
-    --shadow-distance : 5px;
-    box-shadow: 
-        calc(0px - var(--shadow-distance) * 1 ) calc(var(--shadow-distance) * 1) #390099,
-        calc(0px - var(--shadow-distance) * 2 ) calc(var(--shadow-distance) * 2) #9E0059,
-        calc(0px - var(--shadow-distance) * 3 ) calc(var(--shadow-distance) * 3) #FF0054,
-        calc(0px - var(--shadow-distance) * 4 ) calc(var(--shadow-distance) * 4) #FF5400,
-        calc(0px - var(--shadow-distance) * 5 ) calc(var(--shadow-distance) * 5) #FFBD00;
-
-        top : calc(0px - var(--shadow-distance) * 5);
-        left : calc(var(--shadow-distance) * 5);
-}
-
-#exButt1:active {
-    --shadow-distance : 3.5px;
-    box-shadow: 
-        calc(0px - var(--shadow-distance) * 1 ) calc(var(--shadow-distance) * 1) #390099,
-        calc(0px - var(--shadow-distance) * 2 ) calc(var(--shadow-distance) * 2) #9E0059,
-        calc(0px - var(--shadow-distance) * 3 ) calc(var(--shadow-distance) * 3) #FF0054,
-        calc(0px - var(--shadow-distance) * 4 ) calc(var(--shadow-distance) * 4) #FF5400,
-        calc(0px - var(--shadow-distance) * 5 ) calc(var(--shadow-distance) * 5) #FFBD00;
-
-        top : calc(0px - var(--shadow-distance) * 5);
-        left : calc(var(--shadow-distance) * 5);
+    --left-pos : -50px;
+    width: 1200px;
+    height: 1200px;
 }
