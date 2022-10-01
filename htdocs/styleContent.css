@@ -4,6 +4,7 @@
 body {
     background-color: #20182c;
     margin-bottom: 500px;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .header-spacer {
@@ -17,16 +18,17 @@ body {
     height: auto;
     background-color: none;
     margin-top: 75px;
+    text-align: center;
 }
 
 .pre-content div {
     display: flex;
     justify-content: center;
     background-color: none;
+    max-width: 100%;
 }
 
 #welcome-title {
-    font-family: 'Ubuntu', sans-serif;
     color: white;
 }
 
@@ -34,14 +36,40 @@ body {
     color: whitesmoke;
     word-spacing: normal;
     font-size: 1.75em;
+    background-image: linear-gradient(340deg, #ffb100 5%, #00d7d7 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.6));
 }
 
 #welcome-txt {
-    font-family: 'Ubuntu', sans-serif;
-    color: white;
+    color: rgba(218, 218, 218, 0.925);
     font-size: 1.25em;
     font-weight: 300;
+    margin-bottom: 25px;
+}
+
+#welcome-txt span:nth-of-type(1) {
+    color: whitesmoke;
+    filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.3));
+    font-size: 1.2em;
+}
+
+#welcome-txt span:nth-of-type(2), span:nth-of-type(3) {
+    color: green;
+    background-color:rgb(31, 31, 31);
+    border-radius: 5px;
+    padding: 2px;
+    font-family: "Consolas";
+}
+
+#site-desc {
+    color: rgba(218, 218, 218, 0.925);
+    font-size: 1.1em;
+    font-weight: 300;
     margin-bottom: 250px;
+    text-align: justify;
 }
 
 :root {
@@ -122,7 +150,6 @@ body {
 
 .content {
     margin-top: 75px;
-    /*background-color: #fff;*/
 }
 
 .sect1 {
@@ -152,4 +179,23 @@ body {
     --left-pos : -50px;
     width: 1200px;
     height: 1200px;
+    filter: drop-shadow(5px 20px 15px rgba(0, 0, 0, 0.699));
+}
+
+.bg-gradient {
+    width: 110%;
+    height: 1300px;
+    position: absolute;
+    transform: skewY(350deg);
+    top: -350px;
+
+    background: linear-gradient(
+        141deg,
+        #3f2ff0 10%,
+        #4157fb 33%,
+        #71a8e0 66%,
+        #9ff4c8 100%);
+
+    background-color: transparent;
+    box-shadow: 0px 0px 30px 0px black;
 }
