@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 /*font-family: 'Ubuntu', sans-serif;*/
 
+:root {
+    --fade-duration : 1s;
+    --main-bg-color : #20182c;
+}
+
 body {
-    background-color: #20182c;
+    background-color: var(--main-bg-color);
     margin-bottom: 500px;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -70,10 +75,6 @@ body {
     font-weight: 300;
     margin-bottom: 250px;
     text-align: justify;
-}
-
-:root {
-    --fade-duration : 1s;
 }
 
 @keyframes Kanimation {
@@ -183,7 +184,7 @@ body {
 }
 
 .bg-gradient {
-    width: 110%;
+    width: 100%;
     height: 1300px;
     position: absolute;
     transform: skewY(350deg);

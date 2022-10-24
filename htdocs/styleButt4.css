@@ -1,0 +1,34 @@
+.exButt4 {
+    --distance: 5px;
+    --shadowRadius: 12px;
+
+    --darkOpacity: 0.533;
+    --rDarkOpacity: var(--darkOpacity);
+    --darkColor: rgba(0, 0, 0, var(--rDarkOpacity));
+    --darkShadow: var(--distance) var(--distance) var(--shadowRadius) var(--darkColor);
+
+    --brightOpacity: 0.188;
+    --rBrightOpacity: var(--brightOpacity);
+    --brightColor: rgba(255, 255, 255, var(--rBrightOpacity));
+    --brightShadow: calc(0px - var(--distance)) calc(0px - var(--distance)) var(--shadowRadius) var(--brightColor);
+
+    background-color : var(--main-bg-color);
+    border: none;
+    border-radius: 12.5px;
+    box-shadow: var(--darkShadow),
+                var(--brightShadow);
+
+    transition: all 0.25s;
+}
+
+.exButt4:hover {
+    --distance: 7px;
+    --shadowBlur: 14px;
+}
+
+.exButt4:active {
+    --distance: 4px;
+    --rDarkOpacity: calc(var(--darkOpacity));
+    --rBrightOpacity: calc(var(--brightOpacity));
+    --shadowRadius: 9px;
+}
