@@ -1,4 +1,18 @@
-#exButt3-div {
+.exButt3-div {
+
+    --gradCol1Off : #e81cff;
+    --gradCol2Off : #40c9ff;
+    --gradCol1Active : #26e9ff;
+    --gradCol2Active : #00ff66;
+    --gradCol1Computed : var(--gradCol1Off);
+    --gradCol2Computed : var(--gradCol2Off);
+
+    --gradBlur : 10px;
+    --gradOpacityOff : 0.7;
+    --gradOpacityActive : 0.8;
+    --gradOpacityComputed : var(--gradOpacityOff);
+    --buttRadius : 10px;
+
     background-color: none;
     width: 100%;
     position: relative;
@@ -9,18 +23,49 @@
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
     background-color: none;
+    overflow: visible;
 }
 
-#exButt3 {
-    --hicol : #5300e2;
-    --defcol : white;
-    --shadcol : #390099;
+.exButt3-div::after {
+
+    content: "";
+
+    z-index: -1;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    transform: scale(0.9);
+    opacity: var(--gradOpacityComputed);
+    filter: blur(1px);
+    border-radius: var(--buttRadius);
+
+    transition: all 0.25s;
+
+    background: linear-gradient(
+        -45deg, 
+        var(--gradCol1Computed) 0%,
+        var(--gradCol2Computed) 100% 
+        );
+
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+
+.exButt3 {
+
     background-color: black;
     color: white;
     border: none;
-    border-radius: 10px;
-
+    border-radius: var(--buttRadius);
     box-shadow: none;
+ 
+    position: relative;
 
     transition: all 0.25s;
 
@@ -43,32 +88,22 @@
     }
 }
 
-@keyframes floatingShadowLoop {
+@keyframes floatingLoopShadow {
     0% {
-        box-shadow: 0 0 1px 0 var(--shadcol);
-        color: var(--defcol);
+        filter: blur(1px);
     }
     50% {
-        box-shadow: 0 15px 15px 0 var(--shadcol);
-        color: var(--hicol);
+        filter: blur(var(--gradBlur));
     }
     100% {
-        box-shadow: 0 0 1px 0 var(--shadcol);
-        color: var(--defcol);
+        filter: blur(1px);
     }
 }
 
-#exButt3-div:hover {
+.exButt3-div:hover::after {
+    animation-name: floatingLoopShadow;
+}
+
+.exButt3-div:hover > .exButt3 {
     animation-name: floatingLoop;
-}
-
-#exButt3:hover {
-    animation-name: floatingShadowLoop;
-}
-
-#exButt3:active {
-    --aaaa : 0,255,0;
-    --hicol : chartreuse;
-    --defcol : rgb(var(--aaaa));
-    --shadcol : var(--hicol);
 }

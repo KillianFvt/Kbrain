@@ -1,3 +1,5 @@
+
+
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
@@ -11,12 +13,10 @@ window.onscroll = function() {
   prevScrollpos = currentScrollPos;
 }
 
-//TODO : make element K animate on appearing 
-
 const observer = new IntersectionObserver(entries => {
   // Loop over the entries
   entries.forEach(entry => {
-    console.log(entry.isIntersecting)
+    //console.log(entry.isIntersecting)
     // If the element is visible
     if (entry.isIntersecting) {
       // Add the animation class

@@ -1,4 +1,4 @@
-#exButt1 {
+.exButt1 {
     color: white;
     background-color: #000000;
     padding: 10px 50px;
@@ -20,7 +20,7 @@
         0px 0px #FFBD00;
 }
 
-#exButt1:hover {
+.exButt1-div:hover > .exButt1 {
     --shadow-distance : 5px;
     box-shadow: 
         calc(0px - var(--shadow-distance) * 1 ) calc(var(--shadow-distance) * 1) #390099,
@@ -33,7 +33,7 @@
         left : calc(var(--shadow-distance) * 5);
 }
 
-#exButt1:active {
+.exButt1-div:active > .exButt1 {
     --shadow-distance : 3.5px;
     box-shadow: 
         calc(0px - var(--shadow-distance) * 1 ) calc(var(--shadow-distance) * 1) #390099,
