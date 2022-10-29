@@ -17,12 +17,10 @@ header {
     min-width: 100%;
     min-height: 75px;
     max-height: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
     padding: 10px 2.5%;
     box-shadow: 0px 0px 15px 10px #000000b0;
-    background-color: #200C64;
+    
 
     position: fixed;
     top: 0px;
@@ -31,11 +29,7 @@ header {
 
 #navbar {
     transition: all 0.3s ease-out;
-    z-index: 9;
-}
-
-a {
-    transition: 0.25s;
+    z-index: 10;
 }
 
 .logo {
@@ -46,46 +40,113 @@ a {
     position: fixed;
     top: 10px;
     transition: all 0.3s ease-out;
+    z-index: 100;
 }
 
-#logoPlaceholder {
-    width: 50px;
+@media screen and (min-width: 600px){
+    header {
+        background-color: #200C64;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        padding-left: 150px;
+        padding-right: 50px;
+        padding-top: 15px;
+
+        list-style: none;
+    }
+
+    #menu-toggle {
+        display: none;
+    }
+
+    .menu-bg {
+        display: none;
+    }
 }
 
-.menu {
-    list-style: none;
+
+
+@media screen and (max-width: 600px){
+    header {
+        background-color: #200C64;
+    }
+
+    #menu-toggle {
+        position: relative;
+        left: 85%;
+        top: 2.5px;
+
+        background: none;
+        border: none;
+
+        transform: scale(1.25);
+        z-index: 20;
+    }
+
+    #menu-toggle img {
+        fill: white;
+
+        width: 50px;
+        height:auto;
+    }
+
+    .navMenu {
+        --isDown: 0;
+
+        background: #200C64;
+        overflow: hidden;
+
+        position: relative;
+        top: -300px;
+        left: -12.5px;
+        border-radius: 20px;
+
+        height: 10%;
+        width: 107%;
+
+        padding-top: 5px;
+        padding-bottom: 15px;
+
+        display:block;
+        z-index: 11;
+
+        transition: top 0.75s ease-in-out;
+    }
+
+    .menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    .menu li {
+        text-align: center;
+        flex: 100%;
+
+        font-size: 50px;
+    }
+
+    .menu li a {
+        font-size: 25px;
+    }
+
+    #menu-bg {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: black;
+        z-index: 9;
+        display:none;
+        opacity: 0;
+
+        transition: all 0.5s ease-in-out;
+    }
 }
-
-.menu li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-.menu li a {
-    transition: all 0.25s ease 0s;
-}
-
-.menu li a:hover {
-    transition: all 0.35s ease 0s;
-    color: #b993ff;
-}
-
-#ContactButton {
-    padding: 10px 25px;
-    background-color: #350455;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-
-
-    transition: all 0.25s;
-}
-
-#ContactButton:hover {
-    background-color: #31003D;
-}
-
-#ContactButton:active {
-    background-color: #93619E;
-}
-
+   

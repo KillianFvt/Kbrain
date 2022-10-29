@@ -181,6 +181,7 @@ body {
     width: 100%;
     height: 110%;
     filter: drop-shadow(5px 20px 15px rgba(0, 0, 0, 0.699));
+    transform: scale(1,1.1);
 }
 
 .bg-gradient {

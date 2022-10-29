@@ -21,26 +21,23 @@
 
             <div id="logoPlaceholder"></div>
 
-            <nav>
+            <button id="menu-toggle" onmouseleave="closeMenu(this)"><img src="images/menu_icon.svg"></img></button>
+
+            <nav class="navMenu toggle-menu" id="menuNav">
                 <ul class="menu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">About Me</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-
-            <a class="cta" href="#">
-                <button id="ContactButton">
-                    Contact
-                </button>
-            </a>
         </header>
+
+        <div id="menu-bg" class="menu-bg toggle-menu"></div>
 
         <div class="bg-gradient"></div>
 
         <div class="header-spacer"></div>
-
-        
 
         <div class="pre-content">
             <div id="welcome-title-div">
